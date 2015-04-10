@@ -1,0 +1,108 @@
+// out: ../css/main.css
+// main: main.less
+
+// http://www.cssportal.com/css3-shapes/
+// https://blog.udemy.com/css3-circles/
+
+.container {
+  width: 100%;
+  height: 15%;
+  text-align:center;
+  font-size: 2.3em;
+  background-color: #99FFCC;
+  .head-photo-container {
+    padding: 2%;
+  }
+}
+
+.rowcontainer{
+  position:absolute;
+  display:inline-block;
+  width: 100%;
+  height: 100%;
+  background:#A5A5A5;
+  overflow:hidden;
+
+  //   background-color: grey; #808000  #800080  #8c9c74  #24262c  #40232d  #cc4c1d #6c2d26 #412f32  #96361f #4a302f #79ab79 #d7d1ab #80CC80 #4d5f4f #6d4a3b
+}
+
+.circle {
+  display:inline-block;
+  // margin-left: %;
+  padding: 1%;
+  border-radius: 100%;
+  background-color:rgba(0,0,0,0.1);
+  width:8%;
+  height:10%;
+  transition: all 0.3s ease 0s;
+}
+
+#berry {
+    &:hover {
+      background-color:#FFCCFF;
+      &~#kiwi {
+      background-color:#FF0033;
+    }
+  }
+}
+#melon{
+    &:hover {
+      background-color:#CCFF66;
+        &~#berry {
+        background-color:#00FFCC;
+      }
+    }
+}
+#kiwi{
+  &:hover{
+    background-color:#99FF33;
+      &~#lemon {
+      background-color:#CC00FF;
+    }
+  }
+}
+#lemon
+{
+  &:hover {
+    background-color:#FFFF99;
+      &~#melon {
+      background-color:#FF3300;
+    }
+  }
+}
+#bomb{
+  &:hover{
+    background-color: #FFFFFF;
+      &~#kiwi {
+      background-color:#CCCCFF;
+    }
+      &~#melon {
+      background-color:#99FFCC;
+    }
+      &~#lemon {
+      background-color:#9966FF;
+    }
+      &~#berry {
+      background-color:#FFCCFF;
+    }
+  }
+}
+// this is specifically for fixing collapsed elements due to float
+.force(){
+
+  &:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+}
+
+// fixes box model to include border and padding in overall width calculation
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
