@@ -1,14 +1,37 @@
 $(document).ready(function() {
   $('.circle').mouseleave(function() {
-    $('.circle').fadeTo('fast', 0.5);
+    $('.active').fadeTo('fast', 0.5);
   });
-  $('.circle').hover(function() {
+  $('.active').mouseenter(function() {
     $(this).fadeTo('fast', 2);
   });
-  $('.circle').click(function(){
+  $('.active').click(function(){
       $(this).fadeTo('fast', 0);
+      $(this).removeClass("active");
   });
+  $('.bomb').click(function(){
+    $('.error1').css({
+      display: "block",
+    });
+  });
+  $('.okay1').click(function(){
+    $('.error2').css({
+      display: "block",
+    });
+  });
+  $('.error2').click(function(){
+    $(".error2").mousemove(function(e){
+      $('.error2').css({
+        'top': e.clientY - 20, 'left': e.clientX - 20, display:"block"
+      });
+});
 
+  });
+  $('.head-photo-container').click(function(){
+    $('.death').css({
+      display: "block",
+    });
+  });
 });
 
 

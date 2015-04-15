@@ -3,10 +3,17 @@
   height: 15%;
   text-align: center;
   font-size: 2.3em;
-  background-color: #99FFCC;
+  background-color: #b5fdd9;
 }
 .container .head-photo-container {
   padding: 2%;
+  background-image: url("../icons/banner5.png");
+}
+.head-photo-container {
+  cursor: pointer;
+  font-family: "Amatic SC";
+  font-size: 2.7em;
+  text-shadow: 2px 0 0 #ffffff, 0 -2px 0 #ffffff, 0 2px 0 #ffffff, -2px 0 0 #ffffff;
 }
 .rowcontainer {
   position: absolute;
@@ -14,83 +21,125 @@
   width: 100%;
   height: 100%;
   background: #A5A5A5;
+  background-image: url("../icons/bg2.png");
   overflow: hidden;
 }
 .circle {
   display: inline-block;
   padding: 1%;
   border-radius: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
-  width: 8%;
-  height: 10%;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 6.7%;
+  height: 12%;
   transition: all 0.3s ease 0s;
 }
-#berry:hover {
+.berry:hover {
+  background-image: url("../icons/berry.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-color: #FFCCFF;
 }
-#berry:hover ~ #kiwi {
+.berry:hover ~ .kiwi {
   background-color: #FF0033;
 }
-#melon:hover {
-  background-color: #CCFF66;
+.melon:hover {
+  background-image: url("../icons/melon.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #cdfca1;
 }
-#melon:hover ~ #berry {
+.melon:hover ~ .berry {
   background-color: #00FFCC;
 }
-#kiwi:hover {
-  background-color: #99FF33;
+.kiwi:hover {
+  background-color: #d4fe85;
+  background-image: url("../icons/kiwi.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
-#kiwi:hover ~ #lemon {
+.kiwi:hover ~ .lemon {
   background-color: #CC00FF;
 }
-#lemon:hover {
+.lemon:hover {
+  background-image: url("../icons/lemon.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-color: #FFFF99;
 }
-#lemon:hover ~ #melon {
+.lemon:hover ~ .melon {
   background-color: #FF3300;
 }
-#bomb:hover {
-  background-color: #FFFFFF;
+.bomb:hover {
+  background-image: url("../icons/bomb.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #fca3a1;
 }
-#bomb:hover ~ #kiwi {
+.bomb:hover ~ .kiwi {
   background-color: #CCCCFF;
 }
-#bomb:hover ~ #melon {
+.bomb:hover ~ .melon {
   background-color: #99FFCC;
 }
-#bomb:hover ~ #lemon {
+.bomb:hover ~ .lemon {
   background-color: #9966FF;
 }
-#bomb:hover ~ #berry {
+.bomb:hover ~ .berry {
   background-color: #FFCCFF;
 }
-.error1 {
+.error1,
+.error2 {
   position: fixed;
+  z-index: 100;
+  display: none;
+}
+.error1 {
   background-image: url("http://www.techf5.com/pic/windows-error-popup-box.png");
   width: 407px;
   height: 270px;
-  float: left;
+  top: 10%;
+  left: 20%;
 }
-.error1:after {
-  content: " ";
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
+.error1 .okay1 {
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 102px;
+  height: 21px;
+  margin-left: 217px;
+  margin-top: 243px;
+  cursor: pointer;
+}
+.error1 .notokay {
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 75px;
+  height: 21px;
+  margin-left: 327px;
+  margin-top: -20px;
+  cursor: no-drop;
 }
 .error2 {
-  position: fixed;
   background-image: url("http://www.tothepc.com/pic/fake-funny-message-boxes-windows.png");
   width: 359px;
   height: 124px;
-  float: left;
+  top: 40%;
+  left: 60%;
+  cursor: pointer;
 }
-.error2:after {
-  content: " ";
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
+.death {
+  position: absolute;
+  background-image: url("http://www.driverentry.com.br/images/UselessBSOD.png");
+  width: 100%;
+  height: 1024px;
+  z-index: 100;
+  display: none;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 html {
   box-sizing: border-box;
